@@ -43,10 +43,9 @@ $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-o
 
 - That's all Done, Save the settings and Start Build your Email Subscriber List
 - All Collected Emails and Names are Stored on Firebase Realtime Database
-- You can Export collected Email's as JSON Format only - there are plenty of online sites available for converting the JSON into CSV format else you can do it manually
+- You can Export the collected Email's as JSON Format only - there are plenty of online sites available for converting the JSON into CSV format else you can do it manually
 
 <b>Live Setup and Demo's</b> - https://youtu.be/AIz-vOw-UsY
-
 
 ### License & Copyright
 
