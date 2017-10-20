@@ -75,7 +75,9 @@ $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-o
 
 <title>Subscribe to our Updates</title>
 <meta name="Description" content="Subscribe to our Blog Post Updates.">
-<link href='https://www.mskian.com/msk.ico' rel='icon' type='image/x-icon'/>
+<?php $current_page = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+ echo '<link rel="canonical" href="'.$current_page.'" itemprop="url"/>'; ?>
+	
 
 <!-- CSS and Fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
