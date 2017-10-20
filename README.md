@@ -6,9 +6,10 @@
 
 <p>Build an Email Subscriber list for your Blog/Website by using Firebase Realtime Database.</P>
 
-- Open Free account on - https://firebase.google.com
-- Create Firebase Project
+- Open - https://firebase.google.com
+- Create a New Firebase Project
 - Goto Database
+- Go to RULE
 - Update the Database Auth Rule
 
 ```
