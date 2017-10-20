@@ -11,11 +11,18 @@
 - Goto Database
 - Update the Database Auth Rule
 
-
+```
+ {
+  "rules": {
+    ".read": "auth != true",
+    ".write": "auth != true"
+  }
+}
+```
 
 
 - Create a New Folder on your Web server Named as <b>subscribe</b>
-- Download and Upload this Plugin on Newly Created Folder - <b>subscribe</b>
+- Download and Upload this Plugin - https://github.com/mskian/Build-an-Email-Subscriber-List-by-using-Firebase/archive/master.zip on Newly Created Folder - <b>subscribe</b>
 - Find this Below line 
 
 
@@ -23,8 +30,8 @@
 $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-offset-3"><div class="alert alert-success text-center"><i class="fa fa-thumbs-up"></i> <b>Thanks for Subscribe to Our Blog Post  Updates</b></div></div></div></div>';
 ```
 
-- Replace the Default alert Message with your OWN Alert Message
-- Next Find this Line & replace it with your Firebase real-time database Storage URL
+- Replace the Default Alert Message with your OWN Alert Message
+- Next Find this Line & replace it with your Firebase real-time Database Storage URL
 
 ```
 //replace https://example-project.firebaseio.com with Firebase Realtime DB URL - DON'T REMOVE /subscribers.json
@@ -33,7 +40,7 @@ $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-o
 
 - That's all Done, Save the settings and Start Build your Email Subscriber List
 - All Collected Emails and Names are Stored on Firebase Realtime Database
-- you can Export collected Email's as JSON Format only - there are plenty of online sites available for converting the JSON into CSV format else you can do it manually
+- You can Export collected Email's as JSON Format only - there are plenty of online sites available for converting the JSON into CSV format else you can do it manually
 
 Live Setup and Demo's - https://youtu.be/AIz-vOw-UsY
 
