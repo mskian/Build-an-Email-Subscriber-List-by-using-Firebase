@@ -41,7 +41,7 @@ $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-o
     $url = "https://example-project.firebaseio.com/subscribers.json";
 ```
 
-- That's all Done, Save the settings and Start Build your Email Subscriber List
+- That's all Done, Save the settings and Start Building your Blog Email Subscriber List
 - All Collected Emails and Names are Stored on Firebase Realtime Database
 - You can Export the collected Email's as JSON Format only - there are plenty of online sites available for converting the JSON into CSV format else you can do it manually
 
