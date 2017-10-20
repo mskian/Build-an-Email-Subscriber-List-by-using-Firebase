@@ -1,10 +1,10 @@
-# Build an Email Subscriber List by-using Firebase Real time Database
+# Build an Email Subscriber List by using Firebase Real time Database
 
 [![GPL](https://img.shields.io/badge/Liscense-GPL-green.svg)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 ### Firebase Realtime Database by Using PHP cURL Method
 
-<p>Build an Email Subscriber List by using Firebase Real-time Database - PHP cURL Method</P>
+<p>Build an Email Subscriber list for your Blog/Website by using Firebase Realtime Database.</P>
 
 - Open Free account on - https://firebase.google.com
 - Create Firebase Project
