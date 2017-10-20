@@ -23,6 +23,7 @@
 
 - Create a New Folder on your Web server Named as <b>subscribe</b>
 - Download and Upload this Plugin - https://github.com/mskian/Build-an-Email-Subscriber-List-by-using-Firebase/archive/master.zip on Newly Created Folder - <b>subscribe</b>
+- Visitor's Subscribe URL - `http://example.com/subscribe`
 - Find this Below line 
 
 
