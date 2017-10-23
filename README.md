@@ -20,7 +20,9 @@
   }
 }
 ```
+**".read": "auth != true",** - Read our Data's in JSON Format - `https://example-project.firebaseio.com/subscribers.json` if you don't want replace it with **null**
 
+**".write": "auth != true"** -  Give Permission to write the Data's it Must be true then only user's input data's are Stored in the Real-time Database.
 
 - Create a New Folder on your Web server Named as <b>subscribe</b>
 - Download and Upload this Plugin - https://github.com/mskian/Build-an-Email-Subscriber-List-by-using-Firebase/archive/master.zip on Newly Created Folder - <b>subscribe</b>
