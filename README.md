@@ -2,7 +2,9 @@
 
 [![GPL](https://img.shields.io/badge/Liscense-GPL-green.svg)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-### Firebase Realtime Database by Using PHP cURL Method
+### Firebase Email Subscription Widget
+
+<p>Collect User's Data into Firebase Realtime Database by Using PHP cURL Method.</p>
 
 <b>Complete Guide to Installation and Setup</b> - https://awts.in/2i0Edam
 
