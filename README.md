@@ -4,41 +4,7 @@
 
 ### Firebase Realtime Database by Using PHP cURL Method
 
-<p>Build an Email Subscriber list for your Blog/Website by using Firebase Realtime Database.</P>
-
-- Open - https://firebase.google.com
-- Create a New Firebase Project
-- Goto Database
-- Go to RULE
-- Update the Database Auth Rule
-
-```
- {
-  "rules": {
-    ".read": "auth != true",
-    ".write": "auth != true"
-  }
-}
-```
-**".read": "auth != true",** - Read our Data's in JSON Format - `https://example-project.firebaseio.com/subscribers.json` if you don't want replace it with **null**
-
-**".write": "auth != true"** -  Give Permission to write the Data's it Must be true then only user's input data's are Stored in the Real-time Database.
-
-- Create a New Folder on your Web server Named as <b>subscribe</b>
-- Download and Upload this Plugin - https://github.com/mskian/Build-an-Email-Subscriber-List-by-using-Firebase/archive/master.zip on Newly Created Folder - <b>subscribe</b>
-- Visitor's Subscribe URL - `http://example.com/subscribe`
-- open `index.php`
-- Find this Below line 
-
-```
-//replace https://example-project.firebaseio.com with Firebase Realtime DB URL - DON'T REMOVE /subscribers.json
-    $url = "https://example-project.firebaseio.com/subscribers.json";
-```
-
-- Replace it with your Firebase real-time Database Storage URL
-- That's all Done, Save the settings and Start Building your Blog Email Subscriber List
-- All Collected Emails and Names are Stored on Firebase Realtime Database
-- You can Export the collected Email's as JSON Format only - there are plenty of online sites available for converting the JSON into CSV format else you can do it manually
+<b>Complete Guide to Installation and Setup</b> - https://awts.in/2i0Edam
 
 <b>Live Setup and Demo's</b> - https://youtu.be/AIz-vOw-UsY
 
