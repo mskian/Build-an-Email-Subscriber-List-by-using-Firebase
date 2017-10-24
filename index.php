@@ -12,7 +12,7 @@
  *
  *            @Firebase Email Subscription
  *            Plugin Name: Firebase Email Subscription
- *            Plugin URI: https://www.allwebtuts.com/
+ *            Plugin URI: https://www.allwebtuts.com/build-an-email-subscriber-list-by-using-firebase/
  *            Description: Build your Email List - Collect your Blog Visitor's Email on Firebase realtime Database
  *            Version: 1.0
  *            License: GPL-3.0+
