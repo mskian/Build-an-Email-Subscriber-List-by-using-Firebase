@@ -8,16 +8,19 @@
  * @author Santhosh veer
  * @license GPL-2.0+
  * @link https://www.allwebtuts.com
- * @copyright 2017-2018 allwebtuts.com, All rights reserved.
+ * @copyright 2016-2018 allwebtuts.com, All rights reserved.
  *
  *            @Firebase Email Subscription
  *            Plugin Name: Firebase Email Subscription
- *            Plugin URI: https://www.allwebtuts.com/build-an-email-subscriber-list-by-using-firebase/
+ *            Plugin URI: https://www.allwebtuts.com/
  *            Description: Build your Email List - Collect your Blog Visitor's Email on Firebase realtime Database
  *            Version: 1.1
  *            License: GPL-3.0+
  *            License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  */
+
+// data sanitization
+require_once dirname(__FILE__) . '/data.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -25,8 +28,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 $name= $_POST["name"];
 $email= $_POST["email"];
 
-$name = htmlspecialchars($name,ENT_COMPAT);
-$email = htmlspecialchars($email,ENT_COMPAT);
+$name = Data::clean_name($name);
+$email = Data::clean_email($email);
+
+//$name = htmlspecialchars($name,ENT_COMPAT);
+//$email = htmlspecialchars($email,ENT_COMPAT);
 
  $data = '{
   "subscriber": {
@@ -34,29 +40,31 @@ $email = htmlspecialchars($email,ENT_COMPAT);
         
 }';
 
-    //replace https://example-project.firebaseio.com with Firebase Realtime DB URL - DON'T REMOVE /subscribers.json
-    $url = "https://example-project.firebaseio.com/subscribers.json";
+//replace https://example-project.firebaseio.com with Firebase Realtime DB URL - DON'T REMOVE /subscribers.json
+$url = "https://example-project.firebaseio.com/subscribers.json";
+
+    // cURL
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);                          
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-    $jsonResponse = curl_exec($ch);
+
+    $response = curl_exec($ch);
+
     if(curl_errno($ch))
     {
         echo 'Curl error: ' . curl_error($ch);
     }
     curl_close($ch);
 
-
 // Show result on JSON Format - if you don't want this just add // infront of the echo
+//echo $response . "\n";
 //echo $data . "\n";
-
 
 }
 
-// Add your Own Message
 $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-offset-3 mx-auto"><div class="alert alert-success text-center"><i class="fas fa-thumbs-up"></i> <b>Thanks for Subscribe to Our Blog Post  Updates</b></div></div></div></div>';
 
 ?>
@@ -73,8 +81,8 @@ $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-o
 <meta name="Description" content="Subscribe to our Blog Post Updates.">
 
 <!-- CSS and Fonts -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 
 <style>
@@ -236,12 +244,12 @@ echo $message;
 }
 ?>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js" integrity="sha256-XqEmjxbIPXDk11mQpk9cpZxYT+8mRyVIkko8mQzX3y8=" crossorigin="anonymous"></script>
 
 <script>
 $(document).ready(function(){
-  $('form').parsley();
+	$('form').parsley();
 });
 </script>
 
